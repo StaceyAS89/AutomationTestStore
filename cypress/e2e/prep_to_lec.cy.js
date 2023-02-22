@@ -14,7 +14,7 @@ user.password = faker.internet.password(15);
 
 beforeEach('', () => {
   cy.log('Open website home page')
-  cy.visit('https://automationteststore.com/')
+  cy.visit('/')
 
   cy.log('Open login page')
   cy.get('.block_2 > #customernav')

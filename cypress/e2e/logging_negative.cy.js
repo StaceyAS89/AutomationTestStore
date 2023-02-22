@@ -19,7 +19,7 @@ user.passwordMore20 = faker.internet.password(21);
 
 beforeEach('', () => {
   cy.log('Open website home page')
-  cy.visit('https://automationteststore.com/')
+  cy.visit('/')
 
   cy.log('Open login page')
   cy.get('.block_2 > #customernav')
