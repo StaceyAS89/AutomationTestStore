@@ -8,6 +8,7 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://automationteststore.com',
     setupNodeEvents(on, config) {
+      baseUrl: 'https://automationteststore.com'
       // implement node event listeners here
     },
   },
