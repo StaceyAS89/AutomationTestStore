@@ -1,9 +1,14 @@
 import * as user from '../fixtures/user.json';
-import { loginViaUI } from '../support/helper';  
+import {
+    loginViaUI
+} from '../support/helper';
+import {
+    makeOrder
+} from '../support/helper';
 
 
 before('', () => {
-loginViaUI(user);
+    loginViaUI(user);
 })
 
 it('Order', () => {
@@ -15,11 +20,5 @@ it('Order', () => {
     cy.get('#special [title="Absolue Eye Precious Cells"]').click();
 
     cy.log('Confirm an order')
-    cy.get('.productpagecart .cart').click();
-    cy.get('#cart_checkout1').click();
-    cy.get('#checkout_btn').click;
-    cy.get('.heading1').should('have.text', '\n\t Checkout Confirmation\n\t\n');
-    cy.log('Checking message about an order')
-    cy.get('#checkout_btn').click();
-    cy.get('div .heading1 .maintext').should('have.text', ' Your Order Has Been Processed!');
+    makeOrder();
 })
