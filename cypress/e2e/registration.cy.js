@@ -113,4 +113,3 @@ beforeEach('', () => {
     cy.get('h1 span.subtext').should('have.text', user.firstName)
   })
 
-
