@@ -37,27 +37,4 @@ export function headLessLogin(user) {
     
     })
 }
-export function findItem(itemName) {
-    cy.get('body').then(body => {
-        if (body.find(`[title="${itemName}"]`).length > 0) {
-            cy.get(`[title="${itemName}"]`).click();
-            makeOrder();
-           }
-        else if (body.find('.pagination li a:contains(">")').length > 0) {
-            cy.get('.pagination li a').contains('>').click();
-            findItem(itemName);
-        }
-        else {
-            alert(`The ${itemName} item is not found`)
-        }
-    })
-}
-export function makeOrder() {
-    cy.get('.productpagecart .cart').click();
-    cy.get('#cart_checkout1').click();
-    cy.get('#checkout_btn').click;
-    cy.get('.heading1').should('have.text', '\n\t Checkout Confirmation\n\t\n');
-    cy.log('Checking message about an order')
-    cy.get('#checkout_btn').click();
-}
 
