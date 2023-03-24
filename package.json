@@ -12,6 +12,10 @@
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0"
   },
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "allure-commandline": "^2.21.0"
+  },
   "scripts": {
     "allure:clear": "rm -rf allure-report/ allure-results cypress/screenshots cypress/videos",
     "cy:run:allure": "NO_COLOR=1 npx cypress run --env allure=true",
