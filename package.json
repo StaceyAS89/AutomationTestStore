@@ -1,9 +1,4 @@
 {
-  "dependencies": {
-    "@faker-js/faker": "^7.6.0",
-    "allure-commandline": "^2.21.0",
-    "cypress": "^12.8.1"
-  },
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.37.0",
     "cypress-multi-reporters": "^1.6.3",
